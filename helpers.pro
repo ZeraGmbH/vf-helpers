@@ -11,10 +11,17 @@ TEMPLATE = lib
 
 DEFINES += VEINHELPERS_LIBRARY
 
-HEADERS += veinhelpers_global.h \
+PUBLIC_HEADERS = veinhelpers_global.h
+
+HEADERS +=  $$PUBLIC_HEADERS \
     vh_handlemanager.h
 
 unix {
     target.path = /usr/lib
     INSTALLS += target
 }
+
+header_files.files = $$PUBLIC_HEADERS
+header_files.path = /usr/include
+INSTALLS += header_files
+INSTALLS += target
