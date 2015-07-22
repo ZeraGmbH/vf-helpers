@@ -24,4 +24,3 @@ unix {
 header_files.files = $$PUBLIC_HEADERS
 header_files.path = /usr/include
 INSTALLS += header_files
-INSTALLS += target

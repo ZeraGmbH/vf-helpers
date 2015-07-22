@@ -16,12 +16,12 @@ namespace VeinHelper
     HandleManager() : m_max(Key()) {}
 
     /**
-     * @brief returns the first handle with the value pValue
+     * @brief returns the first handle with the value t_Value
      */
     Key key(const T &t_value, const Key &t_defaultKey) const { return m_currentHandles.key(t_value, t_defaultKey); }
 
     /**
-     * @brief returns the value stored with Key pKey or the pDefaultValue if not found
+     * @brief returns the value stored with Key t_Key or the t_DefaultValue if not found
      */
     T value(const Key &t_key, const T &t_defaultValue) const { return m_currentHandles.value(t_key, t_defaultValue); }
 
@@ -44,6 +44,7 @@ namespace VeinHelper
     {
       m_currentHandles.clear();
       m_recycledHandles.clear();
+      m_max = Key();
     }
 
     QList<T> values() const { return m_currentHandles.values(); }
