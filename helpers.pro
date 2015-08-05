@@ -11,7 +11,8 @@ TEMPLATE = lib
 
 DEFINES += VEINHELPERS_LIBRARY
 
-PUBLIC_HEADERS = vh_handlemanager.h
+PUBLIC_HEADERS = vh_handlemanager.h \
+  vh_logging.h
 
 HEADERS +=  $$PUBLIC_HEADERS \
     veinhelpers_global.h
