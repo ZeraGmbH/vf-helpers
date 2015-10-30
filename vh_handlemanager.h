@@ -4,10 +4,13 @@
 #include <QVector>
 #include <QHash>
 
+/**
+ * @brief Universal utility classes for Vein Framework
+ */
 namespace VeinHelper
 {
   /**
-   * @b This class implements a Handle management system
+   * @brief This class implements a Handle management system
    * @note the type Key must be default constructible and must provide operator==() and operator++()
    */
   template<typename Key, typename T> class HandleManager
@@ -25,6 +28,11 @@ namespace VeinHelper
      */
     T value(const Key &t_key, const T &t_defaultValue) const { return m_currentHandles.value(t_key, t_defaultValue); }
 
+    /**
+     * @brief inserts the value with the key nextKey()
+     * @param t_value
+     * @return the key obtained via nextKey()
+     */
     Key append(const T &t_value)
     {
       Key k = nextKey();
@@ -32,6 +40,10 @@ namespace VeinHelper
       return k;
     }
 
+    /**
+     * @brief removes t_key from the current handles and adds it to the recycling pool
+     * @param t_key
+     */
     void remove(const Key &t_key)
     {
       if(m_currentHandles.remove(t_key)>0)
@@ -40,6 +52,9 @@ namespace VeinHelper
       }
     }
 
+    /**
+     * @brief clears current and recycled handles, and sets m_max to Key()
+     */
     void clear()
     {
       m_currentHandles.clear();
@@ -47,12 +62,20 @@ namespace VeinHelper
       m_max = Key();
     }
 
+    /**
+     * @brief returns a list of current values
+     * @return
+     */
     QList<T> values() const { return m_currentHandles.values(); }
 
 
 
 
   private:
+    /**
+     * @brief returns an unused key with respect to recycled keys
+     * @return a key that is not used in m_currentHandles
+     */
     Key nextKey()
     {
       Key retVal;
@@ -70,8 +93,18 @@ namespace VeinHelper
     }
 
 
+    /**
+     * @brief deleted handles end up here to be recycled with append
+     */
     QVector<Key> m_recycledHandles;
+    /**
+     * @brief the currently stored data
+     */
     QHash<Key, T> m_currentHandles;
+    /**
+     * @brief the next unused key
+     * @note will only be incremented if no recycled keys are left
+     */
     Key m_max;
   };
 }
