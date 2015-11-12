@@ -10,7 +10,7 @@
 namespace VeinHelper
 {
   /**
-   * @brief This class implements a Handle management system
+   * @brief Implements a Handle management system
    * @note the type Key must be default constructible and must provide operator==() and operator++()
    */
   template<typename Key, typename T> class HandleManager
