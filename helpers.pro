@@ -15,8 +15,7 @@ PUBLIC_HEADERS = vh_handlemanager.h \
   vh_logging.h
 
 HEADERS +=  $$PUBLIC_HEADERS \
-    veinhelpers_global.h \
-    vh_localuidmanager.h
+    veinhelpers_global.h
 
 unix {
     target.path = /usr/lib
