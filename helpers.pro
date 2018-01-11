@@ -12,10 +12,10 @@ TEMPLATE = lib
 DEFINES += VEINHELPERS_LIBRARY
 
 PUBLIC_HEADERS = vh_handlemanager.h \
-  vh_logging.h
+  vh_logging.h \
+  veinhelpers_global.h
 
-HEADERS +=  $$PUBLIC_HEADERS \
-    veinhelpers_global.h
+HEADERS +=  $$PUBLIC_HEADERS
 
 unix {
     target.path = /usr/lib
