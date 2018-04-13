@@ -11,17 +11,20 @@ TEMPLATE = lib
 
 DEFINES += VEINHELPERS_LIBRARY
 
-PUBLIC_HEADERS = vh_handlemanager.h \
+HEADERS += vh_handlemanager.h \
   vh_logging.h \
   veinhelpers_global.h
-
-HEADERS +=  $$PUBLIC_HEADERS
 
 unix {
     target.path = /usr/lib
     INSTALLS += target
 }
 
-header_files.files = $$PUBLIC_HEADERS
-header_files.path = /usr/include
-INSTALLS += header_files
+public_headers.files = $$HEADERS
+
+exists( ../../vein-framework.pri ) {
+  include(../../vein-framework.pri)
+}
+
+SOURCES += \
+    vh_handlemanager.cpp
