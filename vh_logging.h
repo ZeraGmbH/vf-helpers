@@ -16,6 +16,7 @@
 #if defined(VEIN_COLORS_SUPPORT)
 # define VEIN_DEBUGNAME_EVENT "\e[1;34m<Vein.Event>\033[0m"
 # define VEIN_DEBUGNAME_COMPONENT "\e[1;34m<Vein.Event>\033[0m"
+# define VEIN_DEBUGNAME_LOGGER "\e[0;34m<Vein.Logger>\033[0m"
 # define VEIN_DEBUGNAME_NET "\e[1;32m<Vein.Network>\033[0m"
 # define VEIN_DEBUGNAME_NET_VERBOSE "\e[0;32m<Vein.Network>\033[0m"
 # define VEIN_DEBUGNAME_NET_INTRO "\e[1;35m<Vein.Network.Introspection>\033[0m"
@@ -31,6 +32,7 @@
 #else
 # define VEIN_DEBUGNAME_EVENT "<Vein.Event>"
 # define VEIN_DEBUGNAME_COMPONENT "<Vein.Event>"
+# define VEIN_DEBUGNAME_LOGGER "<Vein.Logger>"
 # define VEIN_DEBUGNAME_NET "<Vein.Network>"
 # define VEIN_DEBUGNAME_NET_VERBOSE "<Vein.Network>"
 # define VEIN_DEBUGNAME_NET_INTRO "<Vein.Network.Introspection>"
