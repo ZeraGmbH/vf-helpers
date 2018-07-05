@@ -13,7 +13,8 @@ DEFINES += VEINHELPERS_LIBRARY
 
 HEADERS += vh_handlemanager.h \
   vh_logging.h \
-  veinhelpers_global.h
+  veinhelpers_global.h \
+    vh_macros.h
 
 unix {
     target.path = /usr/lib
