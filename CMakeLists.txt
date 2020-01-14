@@ -22,7 +22,7 @@ include(FeatureSummary)
 include(GNUInstallDirs)
 
 #Find dependecies
-find_package(Qt5 COMPONENTS Core Qml CONFIG REQUIRED)
+find_package(Qt5 COMPONENTS Core CONFIG REQUIRED)
 
 #sum up project Files 
 file(GLOB SOURCES 
@@ -49,7 +49,6 @@ add_library(VfHelpers SHARED
 target_link_libraries(VfHelpers 
     PRIVATE
     Qt5::Core
-    Qt5::Qml
     )
 
 # announce headers - target perspective
