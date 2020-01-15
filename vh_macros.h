@@ -1,7 +1,7 @@
 #ifndef VH_MACROS_H
 #define VH_MACROS_H
 
-#include "veinhelpers_global.h"
+#include "vfhelpers_export.h"
 #include <functional>
 #include <QVariantMap>
 #include <QLatin1String>

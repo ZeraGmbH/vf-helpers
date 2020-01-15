@@ -1,7 +1,7 @@
 #ifndef VH_HANDLE
 #define VH_HANDLE
 
-#include "veinhelpers_global.h"
+#include "vfhelpers_export.h"
 
 #include <QVector>
 #include <QHash>
@@ -15,7 +15,7 @@ namespace VeinHelper
    * @brief Implements a Handle management system
    * @note the type Key must be default constructible and must provide operator==() and operator++()
    */
-  template<typename Key, typename T> class VEINHELPERSSHARED_EXPORT HandleManager
+  template<typename Key, typename T> class VFHELPERS_EXPORT HandleManager
   {
   public:
     HandleManager() : m_max(Key()) {}

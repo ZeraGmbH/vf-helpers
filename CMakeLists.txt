@@ -54,7 +54,7 @@ target_link_libraries(VfHelpers
 # announce headers - target perspective
 target_include_directories(VfHelpers 
     PUBLIC
-    $<BUILD_INTERFACE:${MY_LIBRARY_SOURCE_DIR}/include>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/VfHelpers>
     PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}
